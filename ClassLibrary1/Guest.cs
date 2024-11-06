@@ -25,13 +25,8 @@ namespace HotelManage
         }
         public void BookRoom(Room room)
         {
-            if(room.IsOccupied) {
-                Console.WriteLine("Phòng đã được đặt.... !!! Đặt phòng không thành công");
-                return; 
-            }
             Room = room;
             Room.CheckIn();
-            Console.WriteLine("Phòng đã được đặt");
             room.DisplayRoomInfo();
         }
         public void AddService(Service service)
